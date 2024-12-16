@@ -34,10 +34,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Lists for random selection
-            const times = ["yesterday", "this morning", "last night", "a week ago"];
-            const places = ["grocery store", "library", "beach", "amusement park"];
-            const items = ["book", "banana", "pair of shoes", "souvenir"];
-            const events = ["birthday party", "wedding", "concert", "game night"];
+            const goods = ["yesterday", "this morning", "last night", "a week ago"];
+            const customers = ["grocery store", "library", "beach", "amusement park"];
+            const places = ["book", "banana", "pair of shoes", "souvenir"];
+            const methods = ["birthday party", "wedding", "concert", "game night"];
 
             // Function to update a mad lib part
             function updateMadLibPart(part, list) {
@@ -46,17 +46,17 @@
             }
 
             // Attach click listeners to each part
-            document.getElementById("time").addEventListener("click", function () {
-                updateMadLibPart(this, times);
+            document.getElementById("good").addEventListener("click", function () {
+                updateMadLibPart(this, goods);
+            });
+            document.getElementById("customer").addEventListener("click", function () {
+                updateMadLibPart(this, customers);
             });
             document.getElementById("place").addEventListener("click", function () {
                 updateMadLibPart(this, places);
             });
-            document.getElementById("item").addEventListener("click", function () {
-                updateMadLibPart(this, items);
-            });
-            document.getElementById("event").addEventListener("click", function () {
-                updateMadLibPart(this, events);
+            document.getElementById("method").addEventListener("click", function () {
+                updateMadLibPart(this, methods);
             });
         });
     </script>
@@ -77,15 +77,15 @@
 
     <div class="mad-lib">
         <span id="hello"> We are going sell to </span> 
-        <span id="time" class="mad-lib-part">[object]</span>, to our customers,
-        <span id="place" class="mad-lib-part">[customers]</span> in  
-        <span id="item" class="mad-lib-part">[place]</span>, delivered 
-        <span id="event" class="mad-lib-part">[delivery method]</span>.
+        <span id="good" class="mad-lib-part">[goods]</span>, to our customers,
+        <span id="customer" class="mad-lib-part">[customers]</span> in  
+        <span id="place" class="mad-lib-part">[place]</span>, delivered 
+        <span id="method" class="mad-lib-part">[delivery method]</span>.
         <span id="goodbye"> We're in Business! </span>
     </div>
 
     <div class="section">
-        <h2>Conclusion</h2>
+        <h2>What do you think?</h2>
         <p id="conclusion"> Whaddya think? </p>
     </div>
 </body>
